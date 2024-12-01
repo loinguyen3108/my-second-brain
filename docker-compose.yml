@@ -1,0 +1,8 @@
+services:
+
+  my-second-brain:
+    image: my-second-brain:latest
+    container_name: my-second-brain
+    hostname: my-second-brain
+    ports:
+      - 8080:8080
