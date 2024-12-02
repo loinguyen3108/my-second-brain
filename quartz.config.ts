@@ -13,7 +13,8 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: 'google', 
+      tagId: 'G-QLMSSB6CGH'
     },
     locale: "en-US",
     baseUrl: "my-second-brain-omega.vercel.app",
