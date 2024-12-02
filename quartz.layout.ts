@@ -7,16 +7,16 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Comments({
-      provider: 'giscus',
+      provider: "giscus",
       options: {
         // from data-repo
-        repo: 'loinguyen3108/my-second-brain',
+        repo: "loinguyen3108/my-second-brain",
         // from data-repo-id
-        repoId: 'R_kgDONXAjWg',
+        repoId: "R_kgDONXAjWg",
         // from data-category
-        category: 'Announcements',
+        category: "Announcements",
         // from data-category-id
-        categoryId: 'DIC_kwDONXAjWs4Cky6T',
+        categoryId: "DIC_kwDONXAjWs4Cky6T",
 
         themeUrl: "https://my-second-brain-omega.vercel.app/static/giscus", // corresponds to quartz/static/giscus/
         lightTheme: "light-theme", // corresponds to light-theme.css in quartz/static/giscus/
