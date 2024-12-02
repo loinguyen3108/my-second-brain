@@ -17,10 +17,6 @@ export const sharedPageComponents: SharedLayout = {
         category: "Announcements",
         // from data-category-id
         categoryId: "DIC_kwDONXAjWs4Cky6T",
-
-        themeUrl: "https://my-second-brain-omega.vercel.app/static/giscus", // corresponds to quartz/static/giscus/
-        lightTheme: "light-theme", // corresponds to light-theme.css in quartz/static/giscus/
-        darkTheme: "dark-theme", // corresponds to dark-theme.css quartz/static/giscus/
       }
     }),
   ],
@@ -44,6 +40,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(
+      Component.RecentNotes({
+        title: "Recent Notes", 
+        limit: 3,
+        showTags: false,
+        linkToMore: "tags" 
+      })
+    ),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
