@@ -20,7 +20,7 @@ const config: QuartzConfig = {
     baseUrl: "my-second-brain-omega.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages:  {
+    generateSocialImages: {
       colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
       width: 1200, // width to generate with (in pixels)
       height: 630, // height to generate with (in pixels)

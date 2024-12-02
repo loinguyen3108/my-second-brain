@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: About me
 Author:
   - Loi Nguyen
 Author Profile:
@@ -14,5 +14,6 @@ description: My Second Brain.
 <div class="bentoAbout-wrapper">
 <iframe class="fullIframe" frameBorder="0" src="https://bento.me/loinguyende" scrolling="no"></iframe>
 </div>
+
 
 [[index|Back to home page]]
