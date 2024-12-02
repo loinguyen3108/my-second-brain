@@ -4,6 +4,7 @@ import { range } from "d3"
 import { JSXInternal } from "preact/src/jsx"
 const profilePhotos: Record<string, string> = {
   "Loi Nguyen": "https://github.com/loinguyen3108.png",
+  "Vu Trinh": "http://localhost:8080/static/authors/vu_trinh.png",
   "default": "https://imgflip.com/s/meme/Doge.jpg",
 }
 function createAuthorElement(author: string, link: string) {
