@@ -21,6 +21,8 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     generateSocialImages: {
+      socialImage: "my-images/cover.png",
+      socialDescription: "If you want something you’ve never had. You must be willing to do something you’ve never done",
       colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
       width: 1200, // width to generate with (in pixels)
       height: 630, // height to generate with (in pixels)
