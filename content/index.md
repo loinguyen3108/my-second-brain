@@ -13,7 +13,8 @@ description: My Second Brain.
 Welcome to my Second Brain! This is a constantly evolving collection of notes, ideas, projects, and resources.
 
 >[!quote]
-> Big Data, Big Think
+> If you want something you've never had
+> You must be willing to do something you've never done
 
 ## Data Engineer
 ---
