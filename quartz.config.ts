@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "my-second-brain-omega.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "created",
     generateSocialImages: {
       socialImage: "my-images/cover.png",
       socialDescription: "If you want something you’ve never had. You must be willing to do something you’ve never done",
