@@ -25,7 +25,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text
-
+    const publishAt = fileData.frontmatter?.["publish"] ?? [""];
     if (text) {
       var modifiedSegment: string = ""
       var createdSegment: string = ""
@@ -42,7 +42,11 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
         if (fileData.dates.modified) {
           cfg.defaultDateType = "modified"
-          modifiedSegment = formatDate(getDate(cfg, fileData)!)
+          // modifiedSegment = formatDate(getDate(cfg, fileData)!)
+          var publishAtStr: string = publishAt.toLocaleString()
+          if (publishAtStr) {
+            modifiedSegment = `Published on ${publishAtStr}`
+          }
         }
 
         cfg.defaultDateType = cfgDefaultDataType
@@ -64,7 +68,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       return (
         <p class={classNames(displayClass, "content-meta")}>
           {readingTimeStr} <br />
-          Last updated on {modifiedSegment} <br />  
+          {modifiedSegment} <br />  
           🌟 <a href={`https://github.com/loinguyen3108/my-second-brain/blame/v4/${fileRelativePath}`} class={classNames(displayClass, "external")} target={"_blank"} style={"font-weight:400"}>
             Edit This Page!<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg>
           </a> &nbsp;
