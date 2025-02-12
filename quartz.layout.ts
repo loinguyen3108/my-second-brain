@@ -50,7 +50,7 @@ export const defaultContentPageLayout: PageLayout = {
     //     linkToMore: "tags"
     //   })
     // ),
-    Component.DesktopOnly(Component.Explorer()),
+    // Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
     Component.Graph(),
