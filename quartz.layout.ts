@@ -32,7 +32,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
-    Component.ContentMeta({showReadingTime:true}),
+    Component.ContentMeta({ showReadingTime: true }),
     Component.TagList(),
     Component.Author()
   ],
@@ -41,12 +41,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.Explorer(),
     Component.DesktopOnly(
       Component.RecentNotes({
-        title: "Recent Notes", 
+        title: "Recent Notes",
         limit: 3,
         showTags: false,
-        linkToMore: "tags" 
+        linkToMore: "tags"
       })
     ),
     Component.DesktopOnly(Component.Explorer()),
@@ -66,7 +67,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.Explorer(),
   ],
   right: [],
 }
