@@ -42,14 +42,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.Explorer(),
-    Component.DesktopOnly(
-      Component.RecentNotes({
-        title: "Recent Notes",
-        limit: 3,
-        showTags: false,
-        linkToMore: "tags"
-      })
-    ),
+    // Component.DesktopOnly(
+    //   Component.RecentNotes({
+    //     title: "Recent Notes",
+    //     limit: 3,
+    //     showTags: false,
+    //     linkToMore: "tags"
+    //   })
+    // ),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
