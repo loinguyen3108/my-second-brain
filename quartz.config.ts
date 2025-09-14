@@ -2,7 +2,7 @@ import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
 /**
- * Quartz 4.0 Configuration
+ * Quartz 4 Configuration
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
@@ -13,21 +13,13 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: 'google', 
+      provider: 'google',
       tagId: 'G-QLMSSB6CGH'
     },
     locale: "en-US",
     baseUrl: "my-second-brain-omega.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    generateSocialImages: {
-      socialImage: "my-images/cover.png",
-      socialDescription: "If you want something you’ve never had. You must be willing to do something you’ve never done",
-      colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
-      width: 1200, // width to generate with (in pixels)
-      height: 630, // height to generate with (in pixels)
-      excludeRoot: false, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
-    },
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -66,7 +58,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
+        priority: ["frontmatter", "git", "filesystem"],
       }),
       Plugin.SyntaxHighlighting({
         theme: {
@@ -95,7 +87,10 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
+      Plugin.Favicon(),
       Plugin.NotFoundPage(),
+      // Comment out CustomOgImages to speed up build time
+      Plugin.CustomOgImages(),
     ],
   },
 }
